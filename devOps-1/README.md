@@ -51,8 +51,6 @@ server {
 Символические ссылки на файлы из `/etc/nginx/sites-available/` находятся в `/etc/nginx/sites-enabled/`, и nginx использует их для определения, какие сайты должны быть активными и обслуживаться, поэтому создадим такие ссылки.
 ```
 sudo ln -s /etc/nginx/sites-available/helloworld.itmo /etc/nginx/sites-enabled/
-```
-```
 sudo ln -s /etc/nginx/sites-available/helloworld.mike /etc/nginx/sites-enabled/
 ```
 
@@ -70,9 +68,9 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/
 sudo mkdir /var/www/helloworld.itmo
 sudo mkdir /var/www/helloworld.mike
 ```
-В каждый добавим `index.html` с уникальным содержанием и папки more с уникальными доп страничками.
+В каждый добавим `index.html` с уникальным содержанием и папки `more` с уникальными доп страничками.
 
-Далее проверим конфигурацию `sudo nginx -t` и перезапустим Nginx `sudo systemctl reload nginx`.
+Далее проверим конфигурацию `sudo nginx -t` и перезапустим nginx `sudo systemctl reload nginx`.
 
 Теперь если мы перейдём на `http://helloworld.itmo/` или `http://helloworld.mike/`мы увидим, что всё работает.
 
@@ -80,7 +78,7 @@ sudo mkdir /var/www/helloworld.mike
 
 ![image](https://github.com/user-attachments/assets/452509e7-edee-45fc-ba27-7ef6bac06a13)
 
-Теперь проверим работоспособность alias
+Теперь проверим работоспособность `alias`.
 
 ![image](https://github.com/user-attachments/assets/9c798738-c502-4f07-85b1-df8d8c7bc259)
 
