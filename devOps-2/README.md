@@ -22,9 +22,10 @@ FROM python:3.9-alpine
 RUN apk add --no-cache --update \
     curl=7.78.0-r0 \
     git=2.32.0-r0
-
-# 3. Используем внешние переменные окружения для секретов
-# Например: docker run -e API_KEY="super_secret_key" myapp
+```
+```bash
+# 3. Используем внешние переменные окружения для секретов, например при запуске
+docker run -e API_KEY="super_secret_key" myapp
 ```
 **Комментарий к 1 практике:**
 
