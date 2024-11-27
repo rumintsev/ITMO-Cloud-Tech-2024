@@ -7,7 +7,7 @@ FROM ubuntu:latest
 # 2. Устанавливаем пакеты, не фиксируя версии и не удаляя лишний кэш
 RUN apt-get update && apt-get install -y \
     curl \
-    git \
+    git
 
 # 3. Жёстко встраиваем секреты в образ
 ENV API_KEY="super_secret_key"
@@ -20,8 +20,8 @@ FROM python:3.9-alpine
 
 # 2. Устанавливаем пакеты с no-cache и явно указываем версии
 RUN apk add --no-cache --update \
-    curl=7.78.0-r0 \
-    git=2.32.0-r0
+    curl=8.11.0-r2 \
+    git=2.45.2-r0
 ```
 ```bash
 # 3. Используем внешние переменные окружения для секретов, например при запуске
@@ -39,11 +39,11 @@ docker run -e API_KEY="super_secret_key" myapp
 
 Если добавлять секрет прямо в Dockerfile мы рискуем, что он утечёт при разных ситуациях, чтобы такого точно не случилось и чтобы лишний раз об этом не думать лучше передавать их контейнеру на этапе запуска, а не сборки.
 
-**Альтернатива к 1 плохой практике:**
+**Альтернативное решение к 1 плохой практике:**
 
 Использовать стабильную версию Ubuntu вместо latest (`FROM ubuntu:20.04`), так мы будем собирать контейнеры на стабильной версии
 
-**Альтернатива к 2 плохой практике:**
+**Альтернативное решение к 2 плохой практике:**
 
 Если вам нужны библиотеки, которые отсутствуют в Alpine можно использовать apt-get clean и удалять `lists`, плюс не забываем про указание версии
 ```dockerfile
@@ -72,3 +72,29 @@ docker run --memory=512m --cpus="1.5" your_image
 ```bash
 docker run --user 1000:1000 -it your_image
 ```
+## Запустим и посмотрим
+
+Создадим два докерфайла вставим в них наши хорошие и плохие практики
+
+![image](https://github.com/user-attachments/assets/024d9943-8f69-4b54-92c1-772856416c8a)
+
+Для определения актуальных версий для хорошего докерфайла можно воспользоваться 
+```bash
+docker run -it python:3.9-alpine sh`
+```
+```sh
+apk update
+apk search curl
+apk search git
+
+```
+![image](https://github.com/user-attachments/assets/c4fa61f1-f8a9-438a-b85a-075d53f79bc4)
+
+Билдим оба образа
+
+![image](https://github.com/user-attachments/assets/eb52169a-cb19-43c9-8aaf-5020e0d53585)
+![image](https://github.com/user-attachments/assets/9d066ca9-d288-4db6-9b95-c15d0756f239)
+
+Помимо повышения безопасности хорошего докерфайла отметим и существенное уменьшение размера хорошего образа, чего мы и хотели добиться
+
+![image](https://github.com/user-attachments/assets/3a812a5b-68f5-491b-b066-164e0db74d9e)
