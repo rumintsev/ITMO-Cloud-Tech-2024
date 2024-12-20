@@ -9,3 +9,6 @@ Configure Nginx to run over HTTPS with a certificate, redirect HTTP to HTTPS, us
 
 [DevOps lab #3.](devOps-3/README.md)
 5 good practices for writing a CI/CD file for GitHub Actions using an example of bad practices
+
+[Claud theory.](cloud-milestone/README.md)
+Is the data centre a private cloud. How to save money by using the cloud
