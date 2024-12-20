@@ -69,7 +69,7 @@ Amazon Elastic Compute Cloud (EC2) предоставляет масштабир
 3. На основе найденных данных заполняем таблицу, которую также можно посмотреть по 
 [ссылке](https://docs.google.com/spreadsheets/d/1stHPbFJYPgS9y-PAfUuJ1IdRIzdLOQndIao7g9XJ4XE/edit?usp=sharing)
 
-![image](https://github.com/user-attachments/assets/5299eaba-ec15-484a-81c8-028b808a11c8)
+![image](https://github.com/user-attachments/assets/4a27bcb4-fc4e-438f-831e-1f80b43381d5)
 
 ### Итог
 
