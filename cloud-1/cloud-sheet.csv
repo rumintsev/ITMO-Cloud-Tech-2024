@@ -1,0 +1,44 @@
+﻿IT Tower;Service Family;Service Type;Service Sub Type;Service Usage Type;Product Code;Usage Type;[lineItem/Operation];"lineItem/
+LineItemDescription"
+Cloud Services;Enterprise Applications;Amazon for Business;Amazon for Business;Shared Device usage;A4B;%SharedDevice%;;
+Cloud Services;Enterprise Applications;Amazon for Business;Amazon for Business;User usage;A4B;%User%;;
+Cloud Services;Management Tools;Amazon CloudWatch;Additional Costs;Tax;AmazonCloudWatch;;;Tax%
+Cloud Services;Management Tools;Amazon CloudWatch;Bytes;Scanning Operations;AmazonCloudWatch;%DataScanned-Bytes;;
+Cloud Services;Management Tools;Amazon CloudWatch;Byte Hours;Hourly Usage;AmazonCloudWatch;%TimedStorage-ByteHrs;;
+Cloud Services;Management Tools;Amazon CloudWatch;Metrics;API requests;AmazonCloudWatch;%Metrics;;
+Cloud Services;Management Tools;Amazon CloudWatch;Metrics;Basic Monitoring Metrics;AmazonCloudWatch;;;
+Cloud Services;Security and Identity;Amazon Detective;Logs Analized;Preview Logs Analize Bytes;AmazonDetective;%PreviewLogsAnalyzed-Bytes;;
+Compute;Compute;Amazon EC2;Burstable instances;CPU Usage;AmazonEC2;%CPUCredits%;;
+Compute;Compute;Amazon EC2;Dedicated Host;Host Usage;AmazonEC2;%HostUsage%;;
+Compute;Compute;Amazon EC2;Instances;Box Usage;AmazonEC2;%BoxUsage%;;
+Compute;Compute;Amazon EC2;Instances;Dedicated Instances;AmazonEC2;%DedicatedUsage%;Surcharge;
+Compute;Compute;Amazon EC2;Instances;Dedicated Instances;AmazonEC2;%DedicatedUsage%;;
+Compute;Compute;Amazon EC2;Instances;GPU Instances;AmazonEC2;%EGpuUsage%;;
+Cloud Services;Security and Identity;Amazon Inspector;Agent Assessments;Assessments Results;AmazonInspector;%agent-assessments%;;
+Cloud Services;Security and Identity;Amazon Inspector;Amazon Inspector Network Assessment;Assessments Results;AmazonInspector;%network-assessments%;;
+Cloud Services;Security and Identity;Amazon Macie;Sensitive Data Findings;Data Processed;AmazonMacie;;;
+Cloud Services;Enterprise Applications;Amazon Pinpoint;Events Recorded;Events Recorded;AmazonPinpoint;%EventsRecorded;PutEvents;
+Cloud Services;Enterprise Applications;Amazon Pinpoint;Push Delivery Attempts;Apple Push Notification service;AmazonPinpoint;%Pinpoint_DeliveryAttempts_APNS;;
+Cloud Services;Enterprise Applications;Amazon Pinpoint;Push Delivery Attempts;Google Cloud Messaging;AmazonPinpoint;%Pinpoint_DeliveryAttempts_GCM;;
+Cloud Services;Enterprise Applications;Amazon Pinpoint;Targeted Audience;Monthly Targeted Audience;AmazonPinpoint;Pinpoint_MonthlyTargetedAudience;Notification;
+Cloud Services;Enterprise Applications;Amazon WorkMail;WorkMail;WorkMail Usage;AmazonWorkMail;%WorkMail%;;
+Cloud Services;Application Services;Amazon WorkSpaces;Additional Costs;Tax;AmazonWorkSpaces;;;Tax%
+Cloud Services;Application Services;Amazon WorkSpaces;Bundles;Hardware;AmazonWorkSpaces;%AW-HW%;;
+Cloud Services;Application Services;Amazon WorkSpaces;Bundles;Software;AmazonWorkSpaces;%AW-SW%;;
+Cloud Services;Management Tools;AWS Budgets;Additional Costs;Tax;AWSBudgets;;;Tax%
+Cloud Services;Management Tools;AWS Budgets;Budgets;Budgets;AWSBudgets;%BudgetsUsage%;;
+Cloud Services;Developer Tools;AWS Device Farm;Automated Tests;Android tests;AWSDeviceFarm;%Android-Device%;;
+Cloud Services;Developer Tools;AWS Device Farm;Automated Tests;iOS tests;AWSDeviceFarm;%iOS-Device%;;
+Cloud Services;Developer Tools;AWS Device Farm;Automated Tests;Windows Chrome tests;AWSDeviceFarm;%Windows-Chrome%;;
+Cloud Services;Developer Tools;AWS Device Farm;Remote Access tests;Android tests;AWSDeviceFarm;%Android-RA%;;
+Cloud Services;Developer Tools;AWS Device Farm;Remote Access tests;iOS tests;AWSDeviceFarm;%iOS-RA%;;
+Compute;Compute;AWS Lambda;Additional Costs;Tax;AWSLambda;;;Tax%
+Compute;Compute;AWS Lambda;Provisioned Concurrency;GB Second;AWSLambda;%Provisioned-GB-Second;;
+Compute;Compute;AWS Lambda;Provisioned Concurrency;In-flight requests;AWSLambda;;ProvisionedConcurrency;
+Compute;Compute;AWS Lambda;Request Handling;Request;AWSLambda;%Request;;
+Compute;Compute;AWS Lambda;Reserved concurrency;GB Second;AWSLambda;%GB-Second;;
+Cloud Services;Analytics;Amazon Elastic MapReduce;Additional Costs;Tax;ElasticMapReduce;;;Tax%
+Cloud Services;Analytics;Amazon Elastic MapReduce;Additional Costs;Tax;ElasticMapReduce;;;Tax%
+Cloud Services;Analytics;Amazon Elastic MapReduce;Instances;Box Usage;ElasticMapReduce;%BoxUsage%;;
+Cloud Services;Analytics;Amazon Elastic MapReduce;Instances;Box Usage;ElasticMapReduce;%BoxUsage%;;
+Cloud Services;Analytics;Amazon Mobile Analytics;Events Recorded;Events Recorded;mobileanalytics;EventsRecorded;PutEvents;
