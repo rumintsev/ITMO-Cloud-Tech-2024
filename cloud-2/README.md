@@ -71,8 +71,7 @@
 ### VPN Gateway
 Сервис для создания защищенного соединения.
 
-3. На основе найденных данных заполняем таблицу, которую также можно посмотреть по 
-[ссылке]([https://docs.google.com/spreadsheets/d/1stHPbFJYPgS9y-PAfUuJ1IdRIzdLOQndIao7g9XJ4XE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/13LmWpikmU4Dqq70Qrd9LPGxbANtOawUknufFgBhC3hs/edit?gid=1049159663#gid=1049159663))
+3. На основе найденных данных заполняем таблицу, которую также можно посмотреть по [ссылке](https://docs.google.com/spreadsheets/d/13LmWpikmU4Dqq70Qrd9LPGxbANtOawUknufFgBhC3hs/edit?usp=sharing)
 
 ![image](https://github.com/user-attachments/assets/9ceb81ee-de90-46fb-8041-09433f39f150)
 
