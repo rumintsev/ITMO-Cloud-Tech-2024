@@ -17,7 +17,7 @@
 
 1. Импортируем данные из `.csv` в excel и сортируем для более удобного взаимодействия.
 
-![image](https://github.com/user-attachments/assets/3fc88e30-822f-4791-b1ea-f8ac0a25aa10)
+![Снимок экрана 2024-12-21 001501](https://github.com/user-attachments/assets/3cf943ca-babc-41e2-b566-b080217855a7)
 
 2. Знакомимся как с официальными ресурсами, где можно узнать подробнее про сервисы, так и с неофициальными, так как официальные не всегда доступны из нашего региона :(
 
@@ -69,7 +69,7 @@ Amazon Elastic Compute Cloud (EC2) предоставляет масштабир
 3. На основе найденных данных заполняем таблицу, которую также можно посмотреть по 
 [ссылке](https://docs.google.com/spreadsheets/d/1MqSlDh3o2NDJUt_2Bp4gl7TDmbkcu5vOl8CYcE2XYYo/edit?usp=sharing)
 
-![image](https://github.com/user-attachments/assets/4a27bcb4-fc4e-438f-831e-1f80b43381d5)
+![image](https://github.com/user-attachments/assets/cf9b7bfa-1d3b-4b8f-a624-92a59788727c)
 
 ### Итог
 
