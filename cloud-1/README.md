@@ -67,9 +67,9 @@ Amazon Elastic Compute Cloud (EC2) предоставляет масштабир
 Помогает собирать и анализировать данные о взаимодействии пользователей с мобильными приложениями (улучшение UX, персонализация контента).
 
 3. На основе найденных данных заполняем таблицу, которую также можно посмотреть по 
-[ссылке](https://docs.google.com/spreadsheets/d/1MqSlDh3o2NDJUt_2Bp4gl7TDmbkcu5vOl8CYcE2XYYo/edit?usp=sharing)
+[ссылке](https://docs.google.com/spreadsheets/d/1XFYex4FHQnD8NfBgbNeAUOp3ps7nzxXL_mpCqfyLYpM/edit?usp=sharing)
 
-![image](https://github.com/user-attachments/assets/cf9b7bfa-1d3b-4b8f-a624-92a59788727c)
+![image](https://github.com/user-attachments/assets/dec51bde-c104-4389-9db0-26a736e696d3)
 
 ### Итог
 
