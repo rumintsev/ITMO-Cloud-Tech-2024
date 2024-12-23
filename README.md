@@ -1,4 +1,5 @@
 # ITMO-Cloud-Tech-2024
+# ALL WAS F**ED UP, maybe one day will be restored
 Repository for educational lab works. The works are in Russian.
 
 [DevOps lab #1.](devOps-1/README.md)
