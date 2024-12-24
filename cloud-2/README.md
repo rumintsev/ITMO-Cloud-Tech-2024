@@ -73,7 +73,8 @@
 
 3. На основе найденных данных заполняем таблицу, которую также можно посмотреть по [ссылке](https://docs.google.com/spreadsheets/d/1We7Ju5TNdsQ6VI8uaa29z47G45DeBpwmlKI5_l1jbD0/edit?usp=sharing)
 
-![image](https://github.com/user-attachments/assets/02cd895d-81fb-4c68-b66e-d31c5240a827)
+![image](https://github.com/user-attachments/assets/40523f3a-b4eb-4e50-aa72-c3d5e894361b)
+
 
 ### Итог
 
