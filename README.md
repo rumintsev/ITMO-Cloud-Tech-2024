@@ -13,7 +13,7 @@ Docker Compose 4 good and bad practices. Container isolation.
 [DevOps lab #3.](devOps-3/README.md)</br>
 5 good practices for writing a CI/CD file for GitHub Actions using an example of bad practices
 
-[DevOps lab #3-star.](devOps-3-star/README.md)</br>
+[DevOps lab #3 star.](devOps-3-star/README.md)</br>
 How to use secrets in GitHub Actions using BitWarden.
 
 [Cloud lab #1.](cloud-1/README.md)</br>
