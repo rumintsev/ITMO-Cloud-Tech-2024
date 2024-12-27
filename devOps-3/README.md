@@ -45,6 +45,10 @@ jobs:
 
 ![image](https://github.com/user-attachments/assets/4126bbeb-f17b-44c6-9754-0ca9cf70dd98)
 
+Видим, что даже GitHub ругается 
+
+![image](https://github.com/user-attachments/assets/fd584147-8bf8-4915-a114-a19e8144a903)
+
 А теперь давайте исправим плохие практики и напишем хороший
 ```yaml
 name: GoodBoy
