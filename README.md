@@ -8,7 +8,7 @@ Configure Nginx to run over HTTPS with a certificate, redirect HTTP to HTTPS, us
 3 good practices for writing a docker file and 2 good practices for operating a docker file using an example of bad practices
 
 [DevOps lab #2 star.](devOps-2-star/README.md)
-Docker Compose 4 good and bad practices. Comtainer isolation.
+Docker Compose 4 good and bad practices. Container isolation.
 
 [DevOps lab #3.](devOps-3/README.md)
 5 good practices for writing a CI/CD file for GitHub Actions using an example of bad practices
