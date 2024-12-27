@@ -21,43 +21,31 @@ on:
       - main
 jobs:
 
-  build:
+  main:
       # 1. Использование тэга latest
     runs-on: ubuntu-latest
     steps:
-      # 2. Отсутствие кеширования
-      - name: Install without cache
+      - name: Checkout
+      # 2. Использование неактуальной версии checkout
+        uses: actions/checkout@v1
+        
+      # 3. Отсутствие кэширования
+      - name: Install dependencies
+        run: npm ci
+        
+      # 4. Перегруженный пайплайн
+      - name: Run all at once
+      # 5. Отсутствие таймаутов
         run: |
-          npm init -y
-          npm install
-
-      # 3. Отсутствие таймаутов
-      - name: No Timeout
-        run: |
-          echo "Task started, will be ready in infinity :)"
-          sleep 5
-
-      # 4. Использование неактуальной версии
-      - name: Checkout 
-        uses: actions/checkout@v1 
-
-  all-at-once:
-    runs-on: ubuntu-latest
-    steps:
-      # 5. Перегруженный пайплайн
-      - name: Overloaded Pipeline
-        run: |
-          npm init -y
-          npm install
           npm run test || echo "Tests failed"
           npm run lint || echo "Linting failed"
-          npm run build || echo "Build failed"
+          npm run build
 ```
-При запуске такого даже GitHub говорит, что не всё хорошо
+Проверим работоспособность
 
-![Снимок экрана 2024-12-21 211820](https://github.com/user-attachments/assets/5217184c-cc47-43f9-8ec8-98ad164847c7)
+![image](https://github.com/user-attachments/assets/4126bbeb-f17b-44c6-9754-0ca9cf70dd98)
 
-А теперь давайте исправим плохие практики в нём и напишем хороший
+А теперь давайте исправим плохие практики и напишем хороший
 ```yaml
 name: GoodBoy
 on:
@@ -66,11 +54,15 @@ on:
       - main
 jobs:
 
-  build:
+  main:
       # 1. Используем определённую версию
     runs-on: ubuntu-24.04
     steps:
-      # 2. Кеширование зависимостей
+      - name: Checkout
+      # 2. Использование актуальной версии checkout
+        uses: actions/checkout@v3
+
+      # 3. Кеширование зависимостей
       - name: Use cache
         uses: actions/cache@v4
         with:
@@ -78,52 +70,25 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node
-      - name: Initialize npm
-        run: npm init -y
-      - name: Install dependencies
-        run: npm install
 
-      # 3. Установка таймаутов
-      - name: Task with Timeout
-        run: |
-          echo "Task started, be in 10 min :)"
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Разбиение на шаги
+      - name: Run tests
+        run: npm run test || echo "Tests failed"
+      # 5. Установка таймаутов
         timeout-minutes: 10
 
-      # 4. Использование актуальной версии
-      - name: Checkout 
-        uses: actions/checkout@v3
+      - name: Run linting
+        run: npm run lint || echo "Linting failed"
 
-      # 5. Разбиение на шаги
-  checkout:
-    runs-on: ubuntu-24.04
-    steps:
-    - name: Initialize npm
-      run: npm init -y
-
-    # Не забываем кэшировать
-    - name: Use cache
-      uses: actions/cache@v4
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests
-      run: npm run test || echo "Tests failed"
-
-    - name: Run linting
-      run: npm run lint || echo "Linting failed"
-
-    - name: Build the project
-      run: npm run build || echo "Build failed"
+      - name: Build the project
+        run: npm run build
 ```
 Запускаем и всё хорошо выполняется
 
-![Снимок экрана 2024-12-21 211709](https://github.com/user-attachments/assets/21185519-ea44-4c50-aa45-f506d7130161)
+![image](https://github.com/user-attachments/assets/f18a6302-f74a-421f-86fb-28f5486b1533)
 
 **Комментарий к 1 практике:**
 
@@ -132,16 +97,17 @@ jobs:
 
 **Комментарий к 2 практике:**
 
-Кешируя зависимости мы ускореем процесс установки и предотвращаем повторное скачивание пакетов.
-
-**Комментарий к 3 практике:**
-
-Если мы запустим задачу, из-за ошибки в которой, она будет длится бесконечно долго, все будут грустить, поэтому устанавливаем таймаут.
-
-**Комментарий к 4 практике:**
-
 Новые версии экшенов включают исправления багов, улучшения безопасности и новые возможности. 
 Например, версия v3 может поддерживать новые функции GitHub Actions, такие как улучшенные возможности кеширования, что делает пайплайн более эффективным.
 
-**Комментарий к 5 практике:**
+**Комментарий к 3 практике:**
+
+Кешируя зависимости мы ускореем процесс установки и предотвращаем повторное скачивание пакетов.
+
+**Комментарий к 4 практике:**
+
 Разбиваем, чтобы добиться читаемости, удобства отладки и гибкости. Разбиение позволяет легче изменять или добавлять новые этапы без нарушения общей структуры.
+
+**Комментарий к 5 практике:**
+
+Если мы запустим задачу, из-за ошибки в которой, она будет длится бесконечно долго, все будут грустить, поэтому устанавливаем таймаут.
